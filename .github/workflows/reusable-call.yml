@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main 
+  workflow_dispatch:
+  
 jobs:
   invoke-reusable-workflow:
     uses: ./.github/workflows/reusable-build.yml  # Call the reusable workflow
