@@ -22,11 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo "value from the user"
+        run: echo "value from the user" ${{ github.event.inputs.var1 }}
   
   control-job:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.check == true }}
+    if: ${{ inputs.check == true }}
     steps:
-      - name: Run a one-line script
+      - name: Run a one-line script 
         run: echo "value from the user1" 
