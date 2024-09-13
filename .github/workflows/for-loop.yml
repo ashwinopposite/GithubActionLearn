@@ -1,0 +1,22 @@
+# For Loop 
+
+name: ForLoop 
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+  for-loop-job:
+    runs-on: ubuntu-latest
+    steps:
+ 
+      # Define a list of items to iterate over
+      - name: Set up variables
+        run: |
+          ITEMS="item1 item2 item3"
+      - name: Loop over items
+        run: |
+          for ITEM in $ITEMS; do
+            echo "Processing $ITEM"
+          done
