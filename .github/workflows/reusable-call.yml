@@ -9,6 +9,6 @@ jobs:
   invoke-reusable-workflow:
     uses: ./.github/workflows/reusable-build.yml  # Call the reusable workflow
     with:
-      var1: '16'
+      var1: 'Good boy'
       var2: true
  
