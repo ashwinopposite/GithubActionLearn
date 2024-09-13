@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
- 
+        
         if: ${{ inputs.var2 == 'true' }}
-      - name: test  
+      - name: test workflow  
         run: echo "hello world ${{inputs.var1}}"
